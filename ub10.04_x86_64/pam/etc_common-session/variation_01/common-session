@@ -12,7 +12,7 @@
 # pam-auth-update to manage selection of other modules.  See
 # pam-auth-update(8) for details.
 
-#>> helianova added umask settings
+#>> epiculture added umask settings
 session    optional     pam_umask.so umask=007
 
 # here are the per-package modules (the "Primary" block)
@@ -25,5 +25,6 @@ session	requisite			pam_deny.so
 session	required			pam_permit.so
 # and here are more per-package modules (the "Additional" block)
 session	required	pam_unix.so 
-session	optional			pam_ck_connector.so nox11
+#>> epiculture ?
+#session	optional			pam_ck_connector.so nox11
 # end of pam-auth-update config
